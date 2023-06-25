@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { zIndex_Header } from "../../util/z-index.js";
+import { zIndex_Header } from "../../util/z-index";
 import Lottie from "lottie-react";
 import sparklesLottie from "../../lottie/sparkles.json";
 import arrowDownLottie from "../../lottie/arrowDown.json";
@@ -11,7 +11,7 @@ export default function Header() {
   const [selected, setSelected] = useState("Home");
 
   useEffect(() => {
-    function handleScroll(e) {
+    function handleScroll() {
       const scrollY = document.documentElement.scrollTop;
       if (scrollY > 200) {
         setHideHeader(true);
