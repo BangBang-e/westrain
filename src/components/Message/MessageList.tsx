@@ -54,8 +54,8 @@ export default function MessageList() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 16rem;
+  min-height: 6rem;
   @media (max-width: 768px) {
-    min-height: 12rem;
+    min-height: 3rem;
   }
 `;
