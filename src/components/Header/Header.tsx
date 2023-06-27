@@ -3,17 +3,29 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { zIndex_Header } from "../../util/z-index";
 import Lottie from "lottie-react";
-import sparklesLottie from "../../lottie/sparkles.json";
+import heartLottie from "../../lottie/heart.json";
 import arrowDownLottie from "../../lottie/arrowDown.json";
 
-export default function Header() {
+interface NavProps {
+  selected: string;
+  setSelected: (selected: string) => void;
+}
+
+export default function Header({ selected, setSelected }: NavProps) {
   const [hideHeader, setHideHeader] = useState(false);
-  const [selected, setSelected] = useState("Home");
+
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      setSelected("Home");
+    } else if (window.location.pathname === "/about") {
+      setSelected("About");
+    }
+  }, []);
 
   useEffect(() => {
     function handleScroll() {
       const scrollY = document.documentElement.scrollTop;
-      if (scrollY > 200) {
+      if (scrollY > 150) {
         setHideHeader(true);
       } else {
         setHideHeader(false);
@@ -34,9 +46,15 @@ export default function Header() {
           backgroundPosition: "center",
         }}
       >
-        <SparklesContainer>
-          <Lottie animationData={sparklesLottie} />
-        </SparklesContainer>
+        <HeartContainer>
+          <div className="lottie">
+            <Lottie animationData={heartLottie} />
+          </div>
+          <div className="text">땡 탄 절</div>
+          <div className="lottie">
+            <Lottie animationData={heartLottie} />
+          </div>
+        </HeartContainer>
         <Title src="images/Title.png" />
         <ArrowContainer className={hideHeader ? "scroll" : " "}>
           <Lottie animationData={arrowDownLottie} />
@@ -51,7 +69,7 @@ export default function Header() {
           About
         </StyledLink>
       </NavContainer>
-      <GradientImg src="/images/Gradient.png" className={hideHeader ? "move-up" : " "} />
+      <GradientImg src="/images/GradientUp.png" className={hideHeader ? "move-up" : " "} />
     </>
   );
 }
@@ -60,7 +78,7 @@ const HeaderContainer = styled.header`
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   top: 0;
   left: 0;
@@ -69,45 +87,62 @@ const HeaderContainer = styled.header`
   z-index: ${zIndex_Header.Header};
   transition: 0.4s;
   &.hide {
-    transform: translateY(-27rem);
+    transform: translateY(-30rem);
     transition: 0.4s;
   }
   @media (max-width: 768px) {
     height: 23rem;
     transition: 0.4s;
     &.hide {
-      transform: translateY(-19rem);
+      transform: translateY(-19.2rem);
       transition: 0.4s;
     }
   }
 `;
 const Title = styled.img`
-  margin-bottom: -3%;
+  margin-top: 12rem;
   width: 50rem;
   z-index: ${zIndex_Header.Title};
   @media (max-width: 768px) {
-    width: 30rem;
+    width: 26rem;
   }
 `;
-const SparklesContainer = styled.div`
+const HeartContainer = styled.div`
   position: absolute;
-  margin-bottom: 3%;
-  width: 85%;
-  opacity: 0.1;
-  z-index: ${zIndex_Header.Sparkles};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  z-index: ${zIndex_Header.Heart};
+  .lottie {
+    width: 1.5rem;
+    @media (max-width: 768px) {
+      width: 1.2rem;
+    }
+  }
+  .text {
+    margin: 0 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    @media (max-width: 768px) {
+      margin: 0 0.1rem 0.3rem 0.1rem;
+      font-size: 0.9rem;
+    }
+  }
 `;
 const ArrowContainer = styled.div`
-  margin-bottom: 5%;
-  width: 6%;
+  margin-bottom: 4%;
+  width: 8%;
   opacity: 0.85;
-  z-index: ${zIndex_Header.Sparkles};
+  z-index: ${zIndex_Header.Arrow};
   transition: 0.4s;
   &.scroll {
     opacity: 0;
     transition: 0.4s;
   }
   @media (max-width: 768px) {
-    width: 10%;
+    width: 12%;
     transition: 0.2s;
   }
 `;
@@ -120,17 +155,18 @@ const WaveImg = styled.img`
 const GradientImg = styled.img`
   position: fixed;
   width: 100%;
+  height: 1.5rem;
   z-index: ${zIndex_Header.Gradient};
-  margin-top: 41rem;
+  margin-top: 39rem;
   transition: 0.4s;
   &.move-up {
     transform: translateY(-29rem);
     transition: 0.4s;
   }
   @media (max-width: 768px) {
-    margin-top: 26rem;
+    margin-top: 25rem;
     &.move-up {
-      transform: translateY(-19rem);
+      transform: translateY(-18.2rem);
       transition: 0.4s;
     }
   }
@@ -139,26 +175,23 @@ const NavContainer = styled.nav`
   position: fixed;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   left: 0;
   margin-top: 37rem;
-  padding-bottom: 2rem;
   width: 100%;
-  height: 4rem;
+  height: 2rem;
   z-index: 100;
   background-color: #ffffff;
   transition: 0.4s;
   &.move-up {
     height: 3rem;
-    transform: translateY(-27rem);
+    transform: translateY(-30rem);
     transition: 0.4s;
   }
   @media (max-width: 768px) {
     margin-top: 23rem;
-    padding-bottom: 1rem;
-    height: 3rem;
     &.move-up {
-      transform: translateY(-19rem);
+      transform: translateY(-19.2rem);
       transition: 0.4s;
     }
   }
@@ -171,20 +204,20 @@ const StyledLink = styled(Link)`
   font-size: 1.1rem;
   transition: 0.2s;
   &.selected {
-    color: #1650e2;
+    color: #81b956;
   }
   &:hover {
-    color: #7a92d1;
+    color: #94c86b;
     transition: 0.2s;
   }
   &:active {
-    color: #072980;
+    color: #53862c;
     font-size: 1rem;
   }
   @media (max-width: 768px) {
-    margin: 0 1rem 0 1rem;
+    margin: 0 0.6rem 0 0.6rem;
     padding: 0.4rem 1.4rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: 0.2s;
   }
 `;

@@ -1,10 +1,9 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { getDoc, onSnapshot, query, orderBy, collection, updateDoc, doc } from "firebase/firestore";
+import { onSnapshot, query, orderBy, collection, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
 import Message from "./Message";
-import AddMessage from "./AddMessage";
 
 interface IMessage {
   id: string;
@@ -45,10 +44,9 @@ export default function MessageList() {
 
   return (
     <Container>
-      {messages.map((message) => (
-        <Message key={message.id} message={message} onEdit={editText} />
+      {messages.map((message, i) => (
+        <Message key={message.id} message={message} onEdit={editText} index={i} />
       ))}
-      <AddMessage />
     </Container>
   );
 }
@@ -56,8 +54,8 @@ export default function MessageList() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 14rem;
+  min-height: 16rem;
   @media (max-width: 768px) {
-    min-height: 10rem;
+    min-height: 12rem;
   }
 `;
