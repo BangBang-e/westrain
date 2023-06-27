@@ -161,7 +161,7 @@ const CodeContainer = styled.div`
 `;
 const Notification = styled.div`
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #81b956;
   letter-spacing: -0.02rem;
 `;
@@ -251,7 +251,7 @@ const ButtonPost = styled.button`
   outline-color: #c9d7be;
   resize: none;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02rem;
   color: #ffffff;
   background-color: #81b956;

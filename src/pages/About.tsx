@@ -134,7 +134,7 @@ const TextBigDevice = styled.div`
   }
   .highlight {
     color: #7e9d67;
-    font-weight: 500;
+    font-weight: 600;
   }
   @media (max-width: 768px) {
     display: none;
@@ -154,7 +154,7 @@ const TextSmallDevice = styled.div`
     }
     .highlight {
       color: #7e9d67;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
 `;
@@ -167,7 +167,7 @@ const ButtonBack = styled.button`
   outline-color: #c9d7be;
   resize: none;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.02rem;
   color: #ffffff;
   background-color: #81b956;

@@ -285,7 +285,7 @@ const ModalContainer = styled.div`
     border-radius: 0.3rem;
     background-color: #c2cfb7;
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 800;
     transition: 0.2s;
     &.edit {
       background-color: #c2cfb7;
@@ -315,7 +315,7 @@ const ModalContainer = styled.div`
     border-radius: 0.3rem;
     background-color: #c1c1c1;
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 800;
     transition: 0.2s;
     &:hover {
       background-color: #d1d1d1;

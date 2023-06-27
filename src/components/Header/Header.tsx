@@ -123,7 +123,7 @@ const HeartContainer = styled.div`
   .text {
     margin: 0 0.2rem;
     font-size: 1.2rem;
-    font-weight: 900;
+    font-weight: 800;
     color: #ffffff;
     @media (max-width: 768px) {
       margin: 0 0.1rem 0.3rem 0.1rem;
@@ -200,7 +200,7 @@ const StyledLink = styled(Link)`
   margin: 0 2rem 0 2rem;
   text-decoration-line: none;
   color: #b2b2b2;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
   transition: 0.2s;
   &.selected {
