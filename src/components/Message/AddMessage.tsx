@@ -83,7 +83,7 @@ export default function AddMessage({ isExpanded, setIsExpanded, toggleExpansion 
                 value={code}
                 onChange={(e: { target: { value: React.SetStateAction<string> } }) => setCode(e.target.value)}
               />
-              <Notification>코드는 수정•삭제 시에 사용되니 꼭 기억해주세요!</Notification>
+              <Notification>코드는 수정•삭제 시에 사용됩니다!</Notification>
             </CodeContainer>
           </TopContainer>
           <MessageTextarea
@@ -250,6 +250,7 @@ const ButtonPost = styled.button`
   border-radius: 3rem;
   outline-color: #c9d7be;
   resize: none;
+  font-family: "Gothic A1", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.02rem;

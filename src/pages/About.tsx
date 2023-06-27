@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Lottie from "lottie-react";
 import calendarLottie from "../lottie/calendar.json";
+import Countdown from "../components/Countdown/Countdown";
 
 interface NavProps {
   selected: string;
@@ -22,6 +23,7 @@ export default function About({ selected, setSelected }: NavProps) {
       <div className="lottie">
         <Lottie animationData={calendarLottie} />
       </div>
+      <Countdown targetDate="2023-06-30 23:59:59" />
       <TextBigDevice>
         <p className="paragraph">
           여러분의 소중한 시간을 내어 웹 사이트를 방문해 주셔서 감사합니다.
@@ -113,12 +115,14 @@ const Container = styled.div`
   width: 100%;
   .lottie {
     width: 18rem;
+    height: 15rem;
   }
   @media (max-width: 768px) {
     margin-top: 6rem;
     padding: 0;
     .lottie {
       width: 8rem;
+      height: 7rem;
     }
   }
 `;
@@ -166,6 +170,7 @@ const ButtonBack = styled.button`
   border-radius: 3rem;
   outline-color: #c9d7be;
   resize: none;
+  font-family: "Gothic A1", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: -0.02rem;
