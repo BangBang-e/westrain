@@ -23,7 +23,7 @@ export default function About({ selected, setSelected }: NavProps) {
       <div className="lottie">
         <Lottie animationData={calendarLottie} />
       </div>
-      <Countdown targetDate="2023-06-30 23:59:59" />
+      <Countdown d_day="2023-06-29 23:59:59" />
       <TextBigDevice>
         <p className="paragraph">
           여러분의 소중한 시간을 내어 웹 사이트를 방문해 주셔서 감사합니다.
@@ -45,9 +45,9 @@ export default function About({ selected, setSelected }: NavProps) {
           그리고 마지막으로 가장 중요한 부분, 서우에게 축하 메세지를 적은 뒤 등록하시면 됩니다.
         </p>
         <p className="paragraph">
-          어찌보면 누구나 맞이하는 생일이지만 여러분의 사려 깊은 마음으로,
+          어찌보면 생일은 그 자체로 특별한 날이지만 여러분의 마음이 담긴
           <br />
-          이 공간에서 따듯한 축하의 마음을 메세지에 담아 더 특별한 날이 될 수 있도록 도와주세요.
+          축하 메세지로 더욱 의미있는 날이 되도록 도와주시기를 부탁드립니다.
           <br />
           다시 한번 바쁜 일상 속에서 시간 내어 주셔서 감사합니다.
           <br />

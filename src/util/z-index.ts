@@ -8,5 +8,5 @@ export const zIndex_Header = {
 export const zIndex_Write = {
   Gradient: 10,
   Container: 11,
-  Button: 31,
+  Button: 100,
 };
