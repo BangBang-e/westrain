@@ -24,7 +24,7 @@ https://github.com/BangBang-e/westrain/assets/107192580/1657aa0e-17b1-4636-aba2-
 
 ## 🕹️ How to use.
 
-![form](https://github.com/BangBang-e/westrain/assets/107192580/c33bbe27-242c-449d-a489-7cb0b35127de)
+![form](https://github.com/BangBang-e/westrain/assets/107192580/049c056c-fe96-4202-b298-3bba10980f7d)
 
 사이트를 이용하는 방법을 알려드리자면,\
 먼저 간단하게 닉네임이나 이름을 입력하고, 이어서 숫자 코드 6자리를 설정하면 됩니다.\
