@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# 🎉 땡 탄 절
+## 땡가리의 생일을 축하하는 메세지를 남길 수 있는 웹 애플리케이션입니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://github.com/BangBang-e/westrain/assets/107192580/1657aa0e-17b1-4636-aba2-01723330620e
 
-## Available Scripts
+## 개발기간: 2023.06.20 ~ 2023.06.28
+<br/>
 
-In the project directory, you can run:
+## Info.
+본 웹 사이트의 이름인 땡탄절은 땡가리+성탄절의 합성어로\
+땡탄절을 맞아 축하메세지를 남길 수 있는 간단한 사이트입니다.
 
-### `npm start`
+<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Pages.
+![Frame 5](https://github.com/BangBang-e/westrain/assets/107192580/b8950011-00cb-41fa-80d9-8d50bda4c80c)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Home: 메세지를 작성, 조회, 수정, 삭제할 수 있습니다. 
+2. About: 간단한 소개와 이용방법, 생일날 타이머를 확인할 수 있습니다.
 
-### `npm test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to use.
+사이트를 이용하는 방법을 알려드리자면,\
+먼저 간단하게 닉네임이나 이름을 입력하고, 이어서 숫자 코드 6자리를 설정하면 됩니다.\
+(코드는 향후 메세지를 수정하거나 삭제할 때 사용되니 꼭 기억해 주세요!)\
+그리고 마지막으로 가장 중요한 부분, 서우에게 축하 메세지를 적은 뒤 등록하시면 됩니다.
 
-### `npm run build`
+<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run build && firebase deploy`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+위 명령어를 통해 앱을 빌드하고 배포할 수 있습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
+And deployed with [Firebase](https://firebase.google.com/).
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
