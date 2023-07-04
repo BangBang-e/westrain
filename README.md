@@ -15,7 +15,7 @@ https://github.com/BangBang-e/westrain/assets/107192580/1657aa0e-17b1-4636-aba2-
 
 ## 📄 Pages.
 
-![Frame 5](https://github.com/BangBang-e/westrain/assets/107192580/b8950011-00cb-41fa-80d9-8d50bda4c80c)
+![Frame](https://github.com/BangBang-e/westrain/assets/107192580/2cc0dea4-2e47-4fc8-9284-0eadb75b218d)
 
 1. Home: 메세지를 작성, 조회, 수정, 삭제할 수 있습니다. 
 2. About: 간단한 소개와 이용방법, 생일날 타이머를 확인할 수 있습니다.
@@ -24,7 +24,7 @@ https://github.com/BangBang-e/westrain/assets/107192580/1657aa0e-17b1-4636-aba2-
 
 ## 🕹️ How to use.
 
-<img width="734" alt="스크린샷 2023-07-05 오전 3 25 41" src="https://github.com/BangBang-e/westrain/assets/107192580/e2caa263-b8ed-4f9c-a8d1-3c171e1244c8">
+![form](https://github.com/BangBang-e/westrain/assets/107192580/c33bbe27-242c-449d-a489-7cb0b35127de)
 
 사이트를 이용하는 방법을 알려드리자면,\
 먼저 간단하게 닉네임이나 이름을 입력하고, 이어서 숫자 코드 6자리를 설정하면 됩니다.\
